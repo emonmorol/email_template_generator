@@ -13,7 +13,7 @@
     }
     
     .email-wrapper {
-      max-width: 600px;
+      max-width: 500px;
       margin: 0 auto;
       background: #f8f9fa;
     }
@@ -41,17 +41,12 @@
       padding: 20px;
       margin: 20px 0;
       text-align: center;
-    }
-    .class-info {
-      display: flex;
-    }
-    .class-details {
-      text-align: left;
-      margin-left: 20px;
+      display: block;
+      justify-content: left;
     }
 
     .thumbnail-img {
-      width: 50%;
+      width: 100%;
       max-height: auto;
       object-fit: scale-down;
       border-radius: 6px;
@@ -59,10 +54,10 @@
     }
 
     .watch-button {
-      width:87%;
       background: linear-gradient(to right, #1a3b5d, #2a9df4);
       color: white !important;
-      padding: 12px 30px;
+      padding: 10px 30px;
+      margin-top: 10px;
       border-radius: 5px;
       text-decoration: none;
       font-weight: bold;
@@ -76,6 +71,14 @@
       border-radius: 8px;
       margin: 20px 0;
       font-style: italic;
+    }
+    .email-title{
+      background: #f8f9fa;
+      padding: 20px 30px;
+      border-radius: 8px;
+      margin: 10px 0;
+      font-style: italic;
+      text-align: left;
     }
 
     .footer {
@@ -103,6 +106,11 @@
       vertical-align: middle;
       margin-right: 8px;
     }
+    #emailTitle {
+      font-size: 20px;
+      font-weight: bolder;
+      margin: 0px 0px 10px 0px;
+    }
   </style>
 </head>
 <body>
@@ -115,14 +123,18 @@
       <h2>Rimons IELTS shared the following class with you</h2>
       
       <div class="class-card">
-        <div class="class-info">
-          <img id="emailThumbnail" class="thumbnail-img" src="" alt="Class Thumbnail">
-          <div class="class-details">
-            <h3 id="emailTitle"></h3>
+        <!-- <div class="class-info"> -->
+          
+          <div>
+            <a id="emailLink" href=""><img id="emailThumbnail" class="thumbnail-img" src="" alt="Class Thumbnail"></a>
+          </div>
+          <div class="email-title">
+            <div id="emailTitle"></div>
             <div class="passcode">Passcode: <strong id="emailPasscode"></strong></div>
           </div>
-        </div>
-        <a id="emailLink" class="watch-button" href="">Watch Now</a>
+         <div>
+           <a id="emailLink" class="watch-button" href="">Watch Now</a>
+         </div>
       </div>
 
       <div class="advice-box">
@@ -133,13 +145,13 @@
     <footer class="footer">
       <div class="social-links">
         <a href="https://wa.me/+8801873405061">
-          <img src="whatsapp-icon.png" alt="WhatsApp">
+          <img src="https://i.ibb.co.com/ks3SfhQs/whatsapp-icon.png" alt="WhatsApp">
         </a>
         <a href="https://www.facebook.com/RimonsIELTS">
-          <img src="facebook-icon.png" alt="Facebook">
+          <img src="https://i.ibb.co.com/yc2Cd5Nz/facebook-icon.png" alt="Facebook">
         </a>
         <a href="https://www.youtube.com/@RimonsIELTS">
-          <img src="youtube-icon.png" alt="YouTube">
+          <img src="https://i.ibb.co.com/jPsrSjtq/youtube-icon.png" alt="YouTube">
         </a>
       </div>
       
@@ -149,9 +161,9 @@
 
   <script>
     document.getElementById('emailTitle').innerText = localStorage.getItem('classTitle') ? localStorage.getItem('classTitle') : 'IELTS Recorded Class';
-    document.getElementById('emailThumbnail').src = localStorage.getItem('thumbnail') ? localStorage.getItem('thumbnail') : 'thumbnail.png';
+    document.getElementById('emailThumbnail').src = localStorage.getItem('thumbnail') ? localStorage.getItem('thumbnail') : 'https://i.ibb.co.com/fVdR6Ld0/thumbnail.png';
     document.getElementById('emailPasscode').innerText = localStorage.getItem('passcode') ? localStorage.getItem('passcode') :"********";
-    document.getElementById('emailMessage').innerText = localStorage.getItem('message') ? localStorage.getItem('message') : 'Regular practice with timed mock tests can significantly improve your time management skills for the actual exam!';
+    document.getElementById('emailMessage').innerText = localStorage.getItem('message') ? localStorage.getItem('message') : 'Consistency Beats Intensity. Progress Over Perfection.';
     document.getElementById('emailLink').href = localStorage.getItem('classLink') ? localStorage.getItem('classLink') : '#';
   </script>
 </body>
