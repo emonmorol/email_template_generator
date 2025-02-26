@@ -6,121 +6,155 @@
   <title>Class Recording - Rimons IELTS</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Arial', sans-serif;
       background-color: #f4f4f4;
       margin: 0;
       padding: 0;
     }
-    .email-container {
+    
+    .email-wrapper {
       max-width: 600px;
-      margin: 20px auto;
-      background: #ffffff;
-      border-radius: 8px;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      margin: 0 auto;
+      background: #f8f9fa;
     }
-    .header {
-      background: #2d8cff;
-      padding: 3px 15px;
-      text-align: left;
+
+    .header-bg {
+      background: linear-gradient(to right, #1a3b5d, #2a9df4);
+      color: #ffffff;
+      padding: 1px;
+      text-align: center;
       border-radius: 8px 8px 0 0;
     }
-    .header h2 {
-      color: #ffffff;
-      padding: 0px 0px;
+
+    .content-card {
+      background: #ffffff;
+      padding: 25px;
+      margin: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     }
-    .email-content {
+
+    .class-card {
+      border: 1px solid #e2e8f0;
+      border-left: 4px solid #2a9df4;
+      border-radius: 8px;
       padding: 20px;
-    }
-    .email-content h2 {
-      font-size: 20px;
-      font-weight: bold;
-      color: #333;
-    }
-    .email-content p {
-      font-size: 14px;
-      color: #333;
-    }
-    .video-section {
-      display: flex;
-      align-items: center;
-      margin: 15px 0;
-    }
-    .video-section img {
-      width: 30%;
-      height: auto;
-      border-radius: 4px;
-      margin-right: 15px;
-    }
-    .video-details h3 {
-      font-size: 16px;
-      margin: 0;
-      color: #000;
-    }
-    .video-details p {
-      font-size: 12px;
-      color: #555;
-      margin: 3px 0;
-    }
-    .watch-button {
-      display: inline-block;
-      background: #2d8cff;
-      color: #ffffff;
-      text-decoration: none;
-      padding: 10px 18px;
-      font-size: 14px;
-      font-weight: bold;
-      border-radius: 5px;
-      margin-top: 10px;
-    }
-    .footer {
-      font-size: 12px;
-      color: #777;
+      margin: 20px 0;
       text-align: center;
-      padding: 15px;
-      border-top: 1px solid #ddd;
-      background: #f9f9f9;
+    }
+    .class-info {
+      display: flex;
+    }
+    .class-details {
+      text-align: left;
+      margin-left: 20px;
+    }
+
+    .thumbnail-img {
+      width: 50%;
+      max-height: auto;
+      object-fit: scale-down;
+      border-radius: 6px;
+      margin-bottom: 15px;
+    }
+
+    .watch-button {
+      width:87%;
+      background: linear-gradient(to right, #1a3b5d, #2a9df4);
+      color: white !important;
+      padding: 12px 30px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    .advice-box {
+      background: #f8f9fa;
+      padding: 10px 20px;
+      border-left: 4px solid #2a9df4;
+      border-radius: 8px;
+      margin: 20px 0;
+      font-style: italic;
+    }
+
+    .footer {
+      background: #1a3b5d;
+      color: #cbd5e0;
+      padding: 5px;
+      text-align: center;
       border-radius: 0 0 8px 8px;
     }
-    .footer a {
-      color: #2d8cff;
+
+    .social-links {
+      margin: 20px 0;
+    }
+
+    .social-links a {
+      display: inline-block;
+      margin: 0 10px;
+      color: white;
       text-decoration: none;
+    }
+
+    .social-links img {
+      width: 24px;
+      height: 24px;
+      vertical-align: middle;
+      margin-right: 8px;
     }
   </style>
 </head>
 <body>
-  <div class="email-container">
-    <div class="header">
-      <h2>Rimons IELTS</h2>
-    </div>
-    <div class="email-content">
-      <h2>Rimons IELTS shared the following class with you.</h2>
-      <p id="emailMessage"></p>
+  <div class="email-wrapper">
+    <header class="header-bg">
+      <h1>Rimons IELTS</h1>
+    </header>
+    
+    <div class="content-card">
+      <h2>Rimons IELTS shared the following class with you</h2>
       
-      <div class="video-section">
-        <img id="emailThumbnail" src="" alt="Class Thumbnail">
-        <div class="video-details">
-          <h3 id="emailTitle"></h3>
-          <p>Passcode:<strong id="emailPasscode"></strong> </p>
-          <a id="emailLink" href="" class="watch-button">Watch now</a>
+      <div class="class-card">
+        <div class="class-info">
+          <img id="emailThumbnail" class="thumbnail-img" src="" alt="Class Thumbnail">
+          <div class="class-details">
+            <h3 id="emailTitle"></h3>
+            <div class="passcode">Passcode: <strong id="emailPasscode"></strong></div>
+          </div>
         </div>
+        <a id="emailLink" class="watch-button" href="">Watch Now</a>
       </div>
 
+      <div class="advice-box">
+        <p>Tip: <span id="emailMessage"></span></p>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="social-links">
+        <a href="https://wa.me/+8801873405061">
+          <img src="whatsapp-icon.png" alt="WhatsApp">
+        </a>
+        <a href="https://www.facebook.com/RimonsIELTS">
+          <img src="facebook-icon.png" alt="Facebook">
+        </a>
+        <a href="https://youtube.com/rimonsielts">
+          <img src="youtube-icon.png" alt="YouTube">
+        </a>
+      </div>
       
-      <p>Thank you,</p>
-      <p>- Rimons IELTS</p>
-    </div>
-    <div class="footer">
-      <p>Whatsapp: +8801873-405061</p>
-      <p>Visit <a href="https://www.facebook.com/RimonsIELTS">Rimons IELTS</a></p>
-      <p>©2025 Rimons IELTS. | All rights reserved</p>
-    </div>
+      <!-- <p>Visit our website: <a href="#" style="color: #2a9df4; text-decoration: none;">www.rimonsielts.com</a></p> -->
+      <p>© 2025 Rimons IELTS. All rights reserved</p>
+    </footer>
   </div>
+
   <script>
-        document.getElementById('emailTitle').innerText = localStorage.getItem('classTitle');
-        document.getElementById('emailThumbnail').src = localStorage.getItem('thumbnail');
-        document.getElementById('emailMessage').innerText = localStorage.getItem('message');
-        document.getElementById('emailPasscode').innerText = localStorage.getItem('passcode');
-        document.getElementById('emailLink').href = localStorage.getItem('classLink');
-    </script>
+    // Local Storage Integration
+    document.getElementById('emailTitle').innerText = localStorage.getItem('classTitle') ? localStorage.getItem('classTitle') : 'IELTS Recorded Class';
+    document.getElementById('emailThumbnail').src = localStorage.getItem('thumbnail') ? localStorage.getItem('thumbnail') : 'thumbnail.png';
+    document.getElementById('emailPasscode').innerText = localStorage.getItem('passcode') ? localStorage.getItem('passcode') :"********";
+    document.getElementById('emailMessage').innerText = localStorage.getItem('message') ? localStorage.getItem('message') : 'Regular practice with timed mock tests can significantly improve your time management skills for the actual exam!';
+    document.getElementById('emailLink').href = localStorage.getItem('classLink') ? localStorage.getItem('classLink') : '#';
+  </script>
 </body>
 </html>
