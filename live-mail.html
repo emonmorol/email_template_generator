@@ -77,8 +77,12 @@
       padding: 20px 30px;
       border-radius: 8px;
       margin: 10px 0;
-      font-style: italic;
+      /* font-style: italic; */
       text-align: left;
+    }
+    .passcode{
+      color: grey;
+      margin-bottom: 5px;
     }
 
     .footer {
@@ -123,7 +127,7 @@
               </div>
               
               <div class="content-card">
-                <h2>Rimons IELTS shared the following class with you</h2>
+                <h2>Rimons IELTS shared the following class link with you</h2>
                 
                 <div class="class-card">
                   <!-- <div class="class-info"> -->
@@ -133,10 +137,11 @@
                     </div>
                     <div class="email-title">
                       <div id="emailTitle"></div>
+                      <div class="passcode">Meeting ID : <strong id="classMeetingId"></strong></div>
                       <div class="passcode">Passcode: <strong id="emailPasscode"></strong></div>
                     </div>
                   <div>
-                    <a id="buttonLink" class="watch-button" href="">Watch Now</a>
+                    <a id="buttonLink" class="watch-button" href="">Click Here To Join</a>
                   </div>
                 </div>
 
@@ -168,7 +173,8 @@
     
     <script>
       document.getElementById('emailTitle').innerText = localStorage.getItem('classTitle') ? localStorage.getItem('classTitle') : 'IELTS Recorded Class';
-      document.getElementById('emailThumbnail').src = localStorage.getItem('thumbnail') ? localStorage.getItem('thumbnail') : 'https://media-hosting.imagekit.io//d9981beda7d8477f/thumbnail.png?Expires=1835219192&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=i-FBGyGmTa-dnVZNh8kOl5zKCtkkqM1AutobuwBfbYwyTRXPH73ZnrLpxNPBmYCHHeQAqkEgQ83Od6qGOEmAqYkE~8FtDoOLY6Xb7-Q4FY~7yQPLkqP7-N0i2kRiAZjjkPtSV5RJqOyytTlhw7VZJtur2sJB6fDZqjZsh8axaA7u5MMF7bpEjuo4BEu-w4n7uSpce9NrRg5ximmC~ftt6lyi40~YNzOq~neZ951euVd3tk91xhY8MnJA54YBeAbFi5mZhTcbNVu5hnxQMWFNaUfdh3QZwcG0yc7kQnEcQNPYC8BA01hf2N~cr1U-YZVcFNBsYHZENE5OpEBsH40HHQ__';
+      document.getElementById('emailThumbnail').src = localStorage.getItem('thumbnail') ? localStorage.getItem('thumbnail') : 'https://media-hosting.imagekit.io//012d9646506f4ad4/live-thumb.png?Expires=1835273385&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=uRuSiE2QPbKNWokw0ByZwLJ2wnYMwG8YexdCzOehmnoz0jyOttwUbMAzoTdiPjtXuw2DHS6uIPInryFttRYFvPn9Ge8hGwbvzzIJ1mcesKXcOANkPcHLtigpiSX7JL9gd7YhRmPI0UQGwTr7k7KocEhVibRY3dBdJiQLZXmYVqsgOpRJswSbchX366XmHz~znV1JJlW4mX9jhdyQbo2dxBHbIs4ihix52fi0Zua~qCqr1IHqP634KyXdVZL3g3F2x9E9rB1G8FdlFaaSmXgOQhbI~Ybnck8bpuGEcIq9A-M3MG2s4BA2yvM-ZyBU5t-TQU9UxPZwHQQgOy2yXR1HmQ__';
+      document.getElementById('classMeetingId').innerText = localStorage.getItem('meetingId') ? localStorage.getItem('meetingId') :"000000000000";
       document.getElementById('emailPasscode').innerText = localStorage.getItem('passcode') ? localStorage.getItem('passcode') :"********";
       document.getElementById('emailMessage').innerText = localStorage.getItem('message') ? localStorage.getItem('message') : 'Consistency Beats Intensity. Progress Over Perfection.';
       document.getElementById('thumbLink').href = localStorage.getItem('classLink') ? localStorage.getItem('classLink') : '#';

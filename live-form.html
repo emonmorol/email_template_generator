@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Class Form</title>
+    <title>Live Class Form</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -51,17 +51,24 @@
 </head>
 <body>
     <div class="form-container">
-        <h2>Choose Template</h2>
-        
-        <button onclick="redirectLive()">Live Class Mail</button>
-        <button onclick="redirectRecord()">Recorded Class Mail</button>
+        <h2>Enter Class Details</h2>
+        <input type="text" id="classTitle" placeholder="Class Title (Required)">
+        <input type="url" id="classLink" placeholder="Class Link (Required)">
+        <input type="text" id="meetingId" placeholder="Meeting Id (Required)">
+        <input type="text" id="passcode" placeholder="Passcode (Required)">
+        <input type="url" id="thumbnail" placeholder="Thumbnail URL">
+        <textarea id="message" placeholder="Short Message"></textarea>
+        <button onclick="saveAndRedirect()">Create Mail</button>
     </div>
     <script>
-        function redirectLive() {
-            window.location.href = 'live-form.html';
-        }
-        function redirectRecord() {
-            window.location.href = 'record-form.html';
+        function saveAndRedirect() {
+            localStorage.setItem('classTitle', document.getElementById('classTitle').value);
+            localStorage.setItem('classLink', document.getElementById('classLink').value);
+            localStorage.setItem('meetingId', document.getElementById('meetingId').value);
+            localStorage.setItem('passcode', document.getElementById('passcode').value);
+            localStorage.setItem('thumbnail', document.getElementById('thumbnail').value);
+            localStorage.setItem('message', document.getElementById('message').value);
+            window.location.href = 'live-mail.html';
         }
     </script>
 </body>
