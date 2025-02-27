@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Class Recording - Rimons IELTS</title>
+  <title>Rimons IELTS</title>
   <style>
     body {
       font-family: 'Arial', sans-serif;
@@ -13,15 +13,14 @@
     }
     
     .email-wrapper {
-      max-width: 500px;
       margin: 0 auto;
       background: #e1e4e879;
     }
 
-    .header-bg {
-      background: linear-gradient(to right, #1a3b5d, #2a9df4);
+    .div-bg {
+      
       color: #ffffff;
-      padding: 1px;
+      padding: 1px 30px;
       text-align: center;
       border-radius: 8px 8px 0 0;
     }
@@ -35,16 +34,14 @@
     }
 
     .class-card {
-    border: 1px solid #e2e8f0;
-    border-left: 4px solid #2a9df4;
-    border-radius: 8px;
-    padding: 20px;
-    margin: 20px 0;
-    text-align: center;
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-    align-items: flex-start;
+      border: 1px solid #e2e8f0;
+      border-left: 4px solid #2a9df4;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+      text-align: center;
+      display: grid;
+      grid-template-columns: 1fr;
     }
 
     .thumbnail-img {
@@ -56,6 +53,7 @@
     }
 
     .watch-button {
+      width: 85%;
       background: linear-gradient(to right, #1a3b5d, #2a9df4);
       color: white !important;
       padding: 10px 30px;
@@ -84,7 +82,6 @@
     }
 
     .footer {
-      background: #1a3b5d;
       color: #cbd5e0;
       padding: 5px;
       text-align: center;
@@ -116,50 +113,60 @@
   </style>
 </head>
 <body>
-  <div class="email-wrapper">
-    <header class="header-bg">
-      <h1>Rimons IELTS</h1>
-    </header>
-    
-    <div class="content-card">
-      <h2>Rimons IELTS shared the following class with you</h2>
-      
-      <div class="class-card">
-        <!-- <div class="class-info"> -->
+  <table role="presentation" width="100%" style="max-width: 600px; margin: auto;">
+  <tr>
+    <td>
+      <div class="email-wrapper">
+        <div style="background-color: #f8f9fa;">
+          <div class="div-bg" style="background: #2C5A99;">
+          <h2>RIMONS IELTS</h1>
+          </div>
           
-          <div>
-            <a id="emailLink" href=""><img id="emailThumbnail" class="thumbnail-img" src="" alt="Class Thumbnail"></a>
-          </div>
-          <div class="email-title">
-            <div id="emailTitle"></div>
-            <div class="passcode">Passcode: <strong id="emailPasscode"></strong></div>
-          </div>
-         <div>
-           <a id="emailLink" class="watch-button" href="">Watch Now</a>
-         </div>
-      </div>
+          <div class="content-card">
+            <h2>Rimons IELTS shared the following class with you</h2>
+            
+            <div class="class-card">
+              <!-- <div class="class-info"> -->
+                
+                <div>
+                  <a id="emailLink" href=""><img id="emailThumbnail" class="thumbnail-img" src="" alt="Class Thumbnail"></a>
+                </div>
+                <div class="email-title">
+                  <div id="emailTitle"></div>
+                  <div class="passcode">Passcode: <strong id="emailPasscode"></strong></div>
+                </div>
+              <div>
+                <a id="emailLink" class="watch-button" href="">Watch Now</a>
+              </div>
+            </div>
 
-      <div class="advice-box">
-        <p>Tip: <span id="emailMessage"></span></p>
-      </div>
-    </div>
+            <div class="advice-box">
+              <p>Tip: <span id="emailMessage"></span></p>
+            </div>
+          </div>
 
-    <footer class="footer">
-      <div class="social-links">
-        <a href="https://wa.me/+8801873405061">
-          <img src="https://media-hosting.imagekit.io//20fae51c21a54c3d/whatsapp-icon.png?Expires=1835219192&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=FYf0BUsyLQ3khJjCY5suCkK4rTEAwZIqV6prO-sHX06nxPuBqlliocZt5mh4oQGCb2liGcmY0u9Pa4PsJpGov1TFBFF~mfDDSvgpZWR4OmNqGElECS6~VmTOuN0z2wY0lyz2EKqTgaR939M7EbIb59J9U~Lz5UpaOZAZ5G2xmbeQT802UZmfJ6uzluusEO4JbgUtHvs8tTypfs4iSJvj4TRjY-gm9k6kOZGKdXEap~LUtbyojvGm8XO~0sQZJWwBrwc5xwAUzivw4FJjphrJOVwieQoaWNOmYUdnQWmnOMS33kkrys-er-Wql6WtS1rOtOz3T-mGir2BAMLbbbbSeQ__" alt="WhatsApp">
-        </a>
-        <a href="https://www.facebook.com/RimonsIELTS">
-          <img src="https://media-hosting.imagekit.io//d61cd19118fe4b02/facebook-icon.png?Expires=1835219192&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=VP2fxwjn18YLdIWMT~RoATx-xOCUOs0RAWWNdmM-VpIo8QbomJBImdA6zPxxfhAacO0z~eVft2y02aesLaExnO0nEdMQNJzOL3xyluyQWlU5h2N2~NJKMdjhznKDifCxpydpHYmEmEUBWoyRquW2J1H6cvnimd~PdwbOX7ZArqnbPOHYU0c4qznrdX87dBcPrax3HM3b77~QYUttTNOdn~qiFDa~p4VK3jd5ubUK71an9qAS9Uh4mKCpe~LHMDp6t8FVvePlhRPQBe~-9UHIffBakrLwmqhyLyvwT0Aln~75~jyouo1aNEYPqKBBvo~z0JvOJ3dmN7z4rTtJmwf7xg__" alt="Facebook">
-        </a>
-        <a href="https://www.youtube.com/@RimonsIELTS">
-          <img src="https://media-hosting.imagekit.io//db290a55071c4c63/youtube-icon.png?Expires=1835219192&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=qfhLgus1awMVbwcYBeq3MwcVck~LXdHq6v6~CDuQ~ZkhwCZn7KsUv4ICr-DorVBV8E0qD6XCrL8FrCC0Jnrx5fHUBPezMvCH-RTAqegFi7iBu~sQuGuCKBLW5OphsfTEEuutNBCJckP0VLMZGHrOP7LFJmntBZpefnDy5rVoAprMRwvYxOYYdGBPV7SrXSTgAp0EoPj8WOUdNo-fYwSPG89ZPk7o11F2f9wkUYsqzw8wEQ~2Dr5D~xYOkLj4umJNl5ilsuwLmd778eiv6MZZMI6nBcNT3BtgbA7iw1dVsVY9yGVulRnABilvirNdTykqcFa6hrqzGTVoUF9nbR7Chg__" alt="YouTube">
-        </a>
+          <div class="footer" style="background: #1a3b5d;">
+            <div class="social-links">
+              <a href="https://wa.me/+8801873405061">
+                <img src="https://media-hosting.imagekit.io//20fae51c21a54c3d/whatsapp-icon.png?Expires=1835219192&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=FYf0BUsyLQ3khJjCY5suCkK4rTEAwZIqV6prO-sHX06nxPuBqlliocZt5mh4oQGCb2liGcmY0u9Pa4PsJpGov1TFBFF~mfDDSvgpZWR4OmNqGElECS6~VmTOuN0z2wY0lyz2EKqTgaR939M7EbIb59J9U~Lz5UpaOZAZ5G2xmbeQT802UZmfJ6uzluusEO4JbgUtHvs8tTypfs4iSJvj4TRjY-gm9k6kOZGKdXEap~LUtbyojvGm8XO~0sQZJWwBrwc5xwAUzivw4FJjphrJOVwieQoaWNOmYUdnQWmnOMS33kkrys-er-Wql6WtS1rOtOz3T-mGir2BAMLbbbbSeQ__" alt="WhatsApp">
+              </a>
+              <a href="https://www.facebook.com/RimonsIELTS">
+                <img src="https://media-hosting.imagekit.io//d61cd19118fe4b02/facebook-icon.png?Expires=1835219192&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=VP2fxwjn18YLdIWMT~RoATx-xOCUOs0RAWWNdmM-VpIo8QbomJBImdA6zPxxfhAacO0z~eVft2y02aesLaExnO0nEdMQNJzOL3xyluyQWlU5h2N2~NJKMdjhznKDifCxpydpHYmEmEUBWoyRquW2J1H6cvnimd~PdwbOX7ZArqnbPOHYU0c4qznrdX87dBcPrax3HM3b77~QYUttTNOdn~qiFDa~p4VK3jd5ubUK71an9qAS9Uh4mKCpe~LHMDp6t8FVvePlhRPQBe~-9UHIffBakrLwmqhyLyvwT0Aln~75~jyouo1aNEYPqKBBvo~z0JvOJ3dmN7z4rTtJmwf7xg__" alt="Facebook">
+              </a>
+              <a href="https://www.youtube.com/@RimonsIELTS">
+                <img src="https://media-hosting.imagekit.io//db290a55071c4c63/youtube-icon.png?Expires=1835219192&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=qfhLgus1awMVbwcYBeq3MwcVck~LXdHq6v6~CDuQ~ZkhwCZn7KsUv4ICr-DorVBV8E0qD6XCrL8FrCC0Jnrx5fHUBPezMvCH-RTAqegFi7iBu~sQuGuCKBLW5OphsfTEEuutNBCJckP0VLMZGHrOP7LFJmntBZpefnDy5rVoAprMRwvYxOYYdGBPV7SrXSTgAp0EoPj8WOUdNo-fYwSPG89ZPk7o11F2f9wkUYsqzw8wEQ~2Dr5D~xYOkLj4umJNl5ilsuwLmd778eiv6MZZMI6nBcNT3BtgbA7iw1dVsVY9yGVulRnABilvirNdTykqcFa6hrqzGTVoUF9nbR7Chg__" alt="YouTube">
+              </a>
+            </div>
+            
+            <p>© 2025 Rimons IELTS. All rights reserved</p>
+          </div>
+        </div>
       </div>
-      
-      <p>© 2025 Rimons IELTS. All rights reserved</p>
-    </footer>
-  </div>
+    </td>
+  </tr>
+</table>
+
+  
 
   <script>
     document.getElementById('emailTitle').innerText = localStorage.getItem('classTitle') ? localStorage.getItem('classTitle') : 'IELTS Recorded Class';
